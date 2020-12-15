@@ -1,0 +1,44 @@
+{% extends 'article/base.html' %}
+
+{% block content %}
+    <div class="article-box-detail">
+        {% if article.published_date %}
+            <p class="article-box__published-date">
+                {{ article.published_date }}
+            </p>
+            {% if user.is_authenticated %}
+                <a href="{% url 'article_un_publish' pk=article.pk %}">Снять с публикации</a>
+            {% endif %}
+        {% else %}
+            <a href="{{ article.get_article_publish_url }}">Опубликовать</a>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <a href="{% url 'article_edit' pk=article.pk %}">Редактировать</a>
+            <a href="{% url 'article_remove' pk=article.pk %}">Удалить</a>
+        {% endif %}
+        <h1 class="article-box__title">{{ article.title }}</h1>
+        <div class="article-box__description">
+            {{ article.text|safe }}
+        </div>
+    </div>
+    <div class="comment-box">
+        {% for comment in article.comments.all %}
+            {% if user.is_authenticated or comment.approved_comment %}
+                <div class="comment">
+                    <div class="date">{{ comment.created_date }}</div>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'comment_remove' pk=comment.pk %}">Удалить</a>
+                        {% if not comment.approved_comment %}
+                            <a href="{% url 'comment_approve' pk=comment.pk %}">Допустить</a>
+                        {% endif %}
+                    {% endif %}
+                    <strong>{{ comment.author }}</strong>
+                    <p>{{ comment.text|linebreaks }}</p>
+                </div>
+            {% endif %}
+        {% empty %}
+            <p>Никаких комментариев пока нет :(</p>
+        {% endfor %}
+        <a href="{% url 'add_comment_to_article' pk=article.pk %}">Добавить комментарий</a>
+    </div>
+{% endblock content %}

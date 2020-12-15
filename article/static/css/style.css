@@ -1,0 +1,270 @@
+* {
+	font-family: 'Roboto';
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body, .main-wrap {
+	height: 100%;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #068ad1;
+	font-size: 14px;
+}
+
+a:hover {
+	text-decoration: none;
+	color: red;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* общие стили */
+
+.ml-10 {
+	margin-left: 10px;
+}
+
+
+.ml-15 {
+	margin-left: 15px;
+}
+
+.main-wrap {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: space-between;
+}
+header .container .header-top {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: 15px 0 20px 0;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo a {
+	color: black;
+	text-transform: uppercase;
+	opacity: .8;
+	font-size: 23px;
+}
+
+.logo span::before {
+	display: inline-block;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/star-logo.svg);
+    background-size: 100%;
+    background-position: center;
+	background-repeat: no-repeat;
+	opacity: .8;
+    margin-right: 4px;
+}
+
+.search {
+	flex: 1 auto;
+	padding-left: 50px;
+	position: relative;
+}
+
+.search_input {
+	width: 100%;
+	padding: 7px 10px 7px 50px;
+	border-radius: 30px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+
+.icon-search {
+	position: absolute;
+	width: 37px;
+	height: 100%;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 18a9 9 0 117.255-3.673L19.5 18.5l-1 1-4.173-3.245A8.96 8.96 0 019 18zm0-2A7 7 0 109 2a7 7 0 000 14z' fill='%23000'/%3E%3C/svg%3E");
+	background-size: 18px;
+	opacity: .3;
+	background-position: 20px;
+	top: 0;
+	background-repeat: no-repeat;
+}
+
+main {
+	flex-grow: 1;
+}
+
+.container {
+	max-width: 1070px;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.block {
+	margin: 20px 0;
+}
+
+footer .container {
+	padding: 10px;
+	text-align: center;
+}
+
+footer .container a {
+	padding: 10px;
+}
+
+.header-list-category {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin-left: 0;
+}
+
+.header-list-category li {
+	margin-right: 20px;
+}
+
+.button-add-advert {
+	padding: 7px 10px;
+	background-color: #068ad1;
+	color: #fff;
+	border-radius: 4px;
+}
+
+.button-add-advert:hover {
+	background-color: #0470aa;
+	color: #fff;
+}
+
+.wrap-main {
+	display: flex;
+
+}
+
+.auth {
+    margin-left:20px;
+}
+
+.sitebar {
+	flex: 0 0 250px;
+    margin-right: 30px;
+}
+
+.sitebar__header {
+    text-transform: uppercase;
+    background: #f3f1ed;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 22px;
+    opacity: .8;
+}
+
+.sitebar__category {
+
+}
+
+.sitebar__category ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sitebar__category li {
+    position: relative;
+}
+
+.sitebar__category li>a:before {
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-image: url(../images/star-logo.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .8;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+
+.sitebar__category li a {
+    font-size: 20px;
+    padding: 10px 10px 10px 27px;
+    border-bottom: 1px solid #f3f1ed;
+    display: block;
+    position: relative;
+}
+
+.sitebar__category li>ul {
+    display: none;
+    width: 250px;
+    border-radius: 4px;
+    z-index: 99;
+    position: absolute;
+    top: 5px;
+    left: 90%;
+    background: #fff;
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.5);
+}
+
+.sitebar__category li:hover>ul {
+    display: block;
+}
+
+.content {
+	flex: 1 auto;	
+}
+
+.article-box {
+    display: flex;
+    margin-bottom: 20px;
+    box-shadow: 2px 3px 10px rgba(0,0,0,0.5);
+}
+
+.article-box__img {
+    flex: 0 0 300px;
+    padding: 5px;
+}
+
+.article-box__title {
+    margin: 0;
+}
+
+.article-box__title a {
+    font-size: 22px;
+}
+
+.article-box__info {
+    padding: 15px;
+}
+

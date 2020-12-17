@@ -8,3 +8,4 @@ db.sqlite3
 /media
 /gunicorn_config.py
 /article/migrations/
+config/local_settings.py

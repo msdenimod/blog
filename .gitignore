@@ -8,5 +8,6 @@ db.sqlite3
 /static
 .DS_Store
 /media
-/gunicorn_config.py
+/config/gunicorn_config.py
 /article/migrations/
+/bin

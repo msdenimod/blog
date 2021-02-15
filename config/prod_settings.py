@@ -8,9 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'zx3=&lm+=9--m94kx+njei6&s=ny3i*b208gs7v7v2syvudu*h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['ovz1.msdenimod.noklm.vps.myjino.ru', '127.0.0.1']
+ALLOWED_HOSTS = ['denimod.ru', '127.0.0.1']
 
 
 # Database

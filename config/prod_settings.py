@@ -10,7 +10,7 @@ SECRET_KEY = 'zx3=&lm+=9--m94kx+njei6&s=ny3i*b208gs7v7v2syvudu*h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['130.193.34.167', '127.0.0.1']
+ALLOWED_HOSTS = ['denimod.ru', '127.0.0.1']
 
 
 # Database
@@ -21,7 +21,7 @@ DATABASES = {
        'ENGINE': 'django.db.backends.postgresql',
        'NAME': 'blog_db',
        'USER': 'blog',
-       'PASSWORD': 'Efedor44a//',
+       'PASSWORD': 'YjYBpKUGL66nvDB',
        'HOST': '127.0.0.1',
        'PORT': '5432',
     }

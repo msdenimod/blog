@@ -6,8 +6,6 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
 	<link rel="shortcut icon" href="{% static 'favicon.ico' %}">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<title>{% block title %} Учебный блог {% endblock title %}</title>
@@ -35,5 +33,7 @@
 	</div>
 	<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
 	<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

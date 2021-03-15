@@ -20,7 +20,7 @@
         </div>
 
         <div class="article-box__description">
-            {{ article.text|striptags|truncatechars:200 }}
+            {{ article.text|safe }}
         </div>
         <a href="{{ article.get_absolute_url }}">Комментариев: {{ article.approved_comments.count }}</a>
         </div>

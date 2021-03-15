@@ -10,15 +10,6 @@
                     <input type="text" name="q" value="{{q}}" class="search_input" placeholder="Поиск...">
                </form>
            </div>
-           <div class="auth">
-               {% if user.is_authenticated %}
-                    <a class="link-login" href="{% url 'logout' %}">Выход</a>
-                    <a class="button-add-advert ml-15" href="{% url 'article_new' %}">Разместить статью</a>
-                    <a class="button-add-advert ml-15" href="{% url 'article_draft_list' %}">Черновики</a>
-               {% else %}
-<!--                    <a class="link-login" href="{% url 'login' %}">Вход</a>-->
-               {% endif %}
-           </div>
        </div>
    </div>
 </header>
